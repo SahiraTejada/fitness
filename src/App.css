@@ -85,7 +85,7 @@ body {
   transform: scale(1.1, 1.1);
 }
 
-.search-btn:hover {
+search-btn:hover {
   color: #FF2625 !important;
   border: 1px solid #FF2625 !important;
 }
