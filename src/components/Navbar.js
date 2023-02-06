@@ -6,22 +6,27 @@ const Navbar = () => {
   return (
     <Stack
         direction="row"
-        justifyContent="space-around"
-        sx={{gap:{
+        justifyContent='space-between'
+        /*sx={{gap:{
             sm: '122px',xs:'40px'
-        },mt:{sm:'32px',xs:'20px'},justifyContent:"none"}} px="20px"
-    
+        },mt:{sm:'32px',xs:'20px'},justifyContent:"none"}} 
+        px="20px"*/
+        height={65}
+        display="flex"
+        alignItems="center"
+        style={{textDecoration:'none',color:'#3A1212'}}
     >
-        <Link to="/" style={{textDecoration:'none',color:'#000',fontSize:'20px'}}>
+        <Link to="/" style={{textDecoration:'none',color:'#FF2625',fontSize:'30px',fontFamily:'Madani Arabic Extra Bold',paddingLeft:'20px'}}>
             Fitness Body
         </Link>
         <Stack
         direction="row"
         gap="40px"
-        fontSize="24px"
-        alignItems="flex-end">
-        <Link to="/" style={{textDecoration:'none',color:'#3A1212',borderBottom:'3px solid #FF2625'}}>Home</Link>
-        <a href='#exercises' style={{textDecoration:'none',color:'#3A1212'}}>Exercises</a>
+        fontSize="20px"
+        marginRight={20}
+        alignItems="center">
+        <Link to="/" style={{textDecoration:'none',color:'#3A1212',borderBottom:'3px solid #FF2625',}}>Home</Link>
+        <a href='#exercises' style={{textDecoration:'none',color:'#3A1212'}}>Body Mass</a>
     </Stack>
     </Stack>
   )

@@ -5,7 +5,11 @@ import BodyPart from './BodyPart';
 import ExerciseCard from './ExerciseCard';
 import RightArrowIcon from '../assets/icons/right-arrow.png';
 import LeftArrowIcon from '../assets/icons/left-arrow.png';
-
+import Icon from '../assets/icons/gym.png';
+import Back from '../assets/icons/back.png';
+import JJ from '../assets/icons/gym.png';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
@@ -24,20 +28,40 @@ const RightArrow = () => {
     </Typography>
   );
 };
+const ImagesIcon =()=>{
+ 
+  const images = [
+  { id: 0, src: `${Back}` },
+  { id: 1, src: `${JJ}`  },
+  { id: 2, src: `${Icon}`  },
+]
+return (
+    <div>
+         {images.map(image => (
+        <img key={image.id} src={image.src} alt="mage" style={{
+            width:'40px',height : '40px'}}/>
+      ))}
+    </div>
+  )
+  
+}
 const HorizonScrollbar = ({data,bodyPart,setBodyPart,isBodyParts}) => {
   return (
+    
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {data.map((item)=>(
         <Box
-        key={item.id || item }
-        itemID={item.id || item }
-        title={item.id || item }
-        m="0 40px">
+        key={item.id || item.name }
+        itemID={item.id || item.name }
+        title={item.id || item.name }
+        m="0 10px">
             { isBodyParts ? <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart}/> : <ExerciseCard exercises={item}/>}
-        </Box>
+        </Box>      
         )
         )}
     </ScrollMenu>
+    
+
   )
 }
 
