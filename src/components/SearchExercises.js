@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
-import HorizontalScrollbar from  '../components/HorizonScrollbar';
-import Back from '../assets/icons/back (1).png';
-import Cardio from '../assets/icons/treadmill.png';
-import All from '../assets/icons/fitness.png';
-import Chest from '../assets/icons/fit.png';
+import Carousel from './Carousel';
 
-
-const images = [
- `${All}` ,`${Back}`,`${Cardio}` ,
-  `${Chest}` ,`${Cardio}`,`${Back}`,
-   `${Back}` ,`${Cardio}`,`${Back}`,
-    `${Back}`,`${Cardio}`
-
-]
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState('');
   const [bodyParts, setBodyParts] = useState([]);
@@ -32,18 +20,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   console.log(bodyParts);
 
-  const array1 = [1, 2, 3, 4];
-const array2 = ['a', 'b', 'c', 'd'];
-  const bodyPartsList = [];
 
-for (let i = 0; i < bodyParts.length; i++) {
-  bodyPartsList.push({
-    name: bodyParts[i],
-    img: images[i]
-  });
-}
 
-console.log(bodyPartsList);
+
 
   const handleSearch = async () => {
     if (search) {
@@ -91,12 +70,11 @@ console.log(bodyPartsList);
           Search
         </Button>
     </Box>
-      <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
- <HorizontalScrollbar data={bodyParts} isBodyParts  setBodyPart={setBodyPart} bodyPart={bodyPart}/>
-      </Box>
+     
      <div>
-   
+    <Carousel data={bodyParts} isBodyParts  setBodyPart={setBodyPart} bodyPart={bodyPart}/>
      </div>
+     
     </Stack>
   );
 };

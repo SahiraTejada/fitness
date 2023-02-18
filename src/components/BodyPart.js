@@ -1,39 +1,19 @@
 import React from 'react'
 import {Stack,Typography} from '@mui/material';
-import Icon from '../assets/icons/gym.png';
-import Back from '../assets/icons/back.png';
-import JJ from '../assets/icons/gym.png';
-    const ImagesIcon =()=>{
- 
-  const images = [
-  { id: 0, src: `${Back}` },
-  { id: 1, src: `${JJ}`  },
-  { id: 2, src: `${Icon}`  },
-]
-return (
-    <div>
-         {images.map(image => (
-        <img key={image.id} src={image.src} alt="mage" style={{
-            width:'40px',height : '40px'}}/>
-      ))}
-    </div>
-  )
-  
-}
+   
 const BodyPart = ({item, setBodyPart, bodyPart,img}) => {
 
   return (
     <Stack
-
     type="button"
     alignItems="center"
     justifyContent="center"
     className='bodyPart-card'
 
 sx={{ backgroundColor: bodyPart === item ? '#FF2625':'#FFF',
-        borderRadius: '8px',
+        borderRadius: '16px',
         width: '130px',
-        height:'50px',
+        height:'44px',
         cursor:'pointer',
         gap:'47px'}}
         onClick={()=> {

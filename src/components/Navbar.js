@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import { Stack } from '@mui/material';
-import Logo from '../assets/images/Screenshot_2023-02-04_112740-removebg-preview.png';
 const Navbar = () => {
   return (
     <Stack
@@ -19,15 +18,7 @@ const Navbar = () => {
         <Link to="/" style={{textDecoration:'none',color:'#FF2625',fontSize:'30px',fontFamily:'Madani Arabic Extra Bold',paddingLeft:'20px'}}>
             Fitness Body
         </Link>
-        <Stack
-        direction="row"
-        gap="40px"
-        fontSize="20px"
-        marginRight={20}
-        alignItems="center">
-        <Link to="/" style={{textDecoration:'none',color:'#3A1212',borderBottom:'3px solid #FF2625',}}>Home</Link>
-        <a href='#exercises' style={{textDecoration:'none',color:'#3A1212'}}>Body Mass</a>
-    </Stack>
+       
     </Stack>
   )
 }

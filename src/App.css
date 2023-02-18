@@ -31,7 +31,7 @@
 
 body {
   font-family: 'Madani Arabic Regular' !important;
-  background-color: #efecda;
+  background-color: #e5e5e5
 }
 
 
@@ -75,8 +75,9 @@ body {
 }
 
 .detail-image {
-  width: 729px;
-  height: 742px;
+  width: 650px;
+  height: 680px;
+  /*calc(100vh - 70px);*/
 }
 
 .hero-banner-img {
@@ -89,12 +90,63 @@ right:90px;
 
 }
 
+.hero-btn{
+      outline: 0;
+      border: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: fit-content;
+      height: 50px;
+      border-radius: 0.5em;
+      overflow: hidden;
+}  
+
+.hero-btn div {
+      transform: translateY(0px);
+      width: 100%;
+    }
+  
+        .hero-btn,
+        .hero-btn div {
+      transition: 0.6s cubic-bezier(.16, 1, .3, 1);
+    }
+  
+        .hero-btn div span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      padding: 0.75em 1.125em;
+    }
+  
+        .hero-btn div:nth-child(1) {
+      background-color: #FF2625;
+    }
+  
+        .hero-btn div:nth-child(2) {
+      background-color: #9b8f8f;
+    }
+  
+  
+        .hero-btn:hover div {
+      transform: translateY(-50px);
+    }
+  
+        .hero-btn p {
+      font-size: 17px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  
+        .hero-btn:active {
+      transform: scale(0.95);
+    }
+
 .exercise-card {
   width: 400px;
   height: 445px;
-  background: #191b24;
-  border-top: 4px solid #FF2625;
-  border-bottom-left-radius: 20px;
+  background: white;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -102,6 +154,7 @@ right:90px;
   padding-bottom: 10px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
+  border-radius: 18px;
 }
 .Ec{
   background-color: #DF2020;
@@ -130,9 +183,9 @@ search-btn:hover {
 .exercise-video {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 25px;
   width: 387px;
-  height: 381px;
+  height: 277px;
   text-decoration: none;
 }
 
@@ -228,14 +281,14 @@ search-btn:hover {
 }
 
 .cover{
-  /*background-image: url('../src/assets/images/man-gadae9296d_1920.jpg');*/
+
   width: 100%;
   height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.5)), url('../src/assets/images/man-gadae9296d_1920.jpg');
+        rgba(0, 0, 0, 0.5)), url('../src/assets/images/man_in_gym.jpg');
   
 }
 
@@ -493,4 +546,132 @@ search-btn:hover {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+
+
+.slider-container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  background-color: #fff7f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.slider {
+  height: 100%;
+  display: flex;
+  ;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.back {
+  left: 10px
+}
+
+
+.foward {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: lightgray;
+}
+
+.footer{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.footer div{
+  display: flex;
+  gap: 15px;
+  margin-left: 15px;
+}
+
+.footer p{
+  color: white;
+}
+
+.creator{
+  margin-right: 25px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 320px;
+  margin: auto 1rem;
+  text-align: center;
+  font-family: arial;
+}
+
+.caro-div{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.caro-img{
+  width: 220px;
+  display: inline-block;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.caro-img:hover{
+transform: scale(1.25);
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 300ms;
+}
+
+#caro{
+  display: flex;
+}
+.caro-items{
+ width: 1250px;
+  height: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  overflow: hidden;
+ 
+}
+
+.slide-btn{
+  opacity: 0.5;
+  cursor: pointer;
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.slide-btn:hover{
+  opacity: 1;
+}
+
+
+.videos-card{
+  width: 300px;
 }

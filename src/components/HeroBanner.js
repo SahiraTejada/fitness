@@ -1,8 +1,7 @@
 import React from 'react';
 import {Box, Stack,Typography,Button} from '@mui/material';
-import HeroBannerImg from '../assets/images/146-1463629_exercise-fitness-gym-png-transparent-png-removebg-preview.png';
-import Pesas from '../assets/images/3548031_01-removebg-preview.png';
-import Man from '../assets/images/man-gadae9296d_1920.jpg';
+
+
 const HeroBanner = () => {
   return (
    
@@ -16,6 +15,19 @@ const HeroBanner = () => {
            Check out the most effective exercises
         </Typography>
         <div>
+          <button className='hero-btn'>
+  <div >
+    <span>
+      <p>Explore Exercises</p>
+    </span>
+  </div>
+  <div>
+    <span>
+      <p>With Fitness Body</p>
+    </span>
+  </div>
+</button>
+          {/*
        <button alt="Explore Exercises" className='btn6'>
   <i>E</i>
   <i>x</i>
@@ -34,7 +46,7 @@ const HeroBanner = () => {
   <i>s</i>
   <i>e</i>
   <i>s</i>
-</button></div>
+  </button>}*/}</div>
        </Box>
       {/*<div class="line"></div>
         <div class="block hero-banner-img">
