@@ -35,15 +35,14 @@ const Exercises = ({ setExercises, bodyPart, exercises }) => {
     sx={{mt:{lg:'110px'}}}
     mt='50px'
     p="20">
-    <Stack direction="row" sx={{gap:{lg: '110px', xs:'50px'}}}
-    flexWrap="wrap" justifyContent="center">
-      {currentExercises.map((exercises,index)=>(
-        <ExerciseCard key={index} exercises={exercises} className="Ec"/>
-      ))}
-    </Stack>
-    <Stack mt='100px' alignItems="center">
-        {exercises.length > 9 && (
-        
+      <Stack direction="row" sx={{gap:{lg: '110px', xs:'50px'}}}
+      flexWrap="wrap" justifyContent="center">
+        {currentExercises.map((exercises,index)=>(
+          <ExerciseCard key={index} exercises={exercises} className="Ec"/>
+        ))}
+      </Stack>
+      <Stack mt='100px' alignItems="center">
+        {exercises.length > 9 && ( 
           <Pagination
           color="standard"
           shape="rounded"
@@ -52,9 +51,8 @@ const Exercises = ({ setExercises, bodyPart, exercises }) => {
           page={currentPage}
           onChange={paginate}
           size="large"/>
-       
         )}
-    </Stack>
+      </Stack>
     </Box>
   )
 }

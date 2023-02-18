@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box,Button,Typography,Stack} from '@mui/material';
+import {Button,Typography,Stack,Box} from '@mui/material';
 import BodyPartImage from '../assets/icons/body-part.png';
 import TargetImage from '../assets/icons/target.png';
 import EquipmentImage from '../assets/icons/equipment.png';
@@ -28,12 +28,12 @@ const Detail = ({ exerciseDetail }) => {
 
   return (
   <Stack gap="50px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
-      <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
+    <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
-        <Typography sx={{ fontSize: { lg: '64px', xs: '30px' } }} fontWeight={700} textTransform="capitalize">
+        <Typography sx={{ fontSize: { lg: '54px', xs: '30px' } }} fontWeight={700} textTransform="capitalize">
           {name}
         </Typography>
-        <Typography sx={{ fontSize: { lg: '20px', xs: '14px' } }} color="#4F4C4C">
+        <Typography sx={{ fontSize: { lg: '18px', xs: '14px' } }} color="#4F4C4C">
           Exercises keep you strong.{' '}
           <span style={{ textTransform: 'capitalize' }}>{name}</span> bup is one
           of the best <br /> exercises to target your {target}. It will help you improve your{' '}
