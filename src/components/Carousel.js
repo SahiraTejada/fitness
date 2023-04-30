@@ -16,12 +16,12 @@ const Carousel = ({data,bodyPart,setBodyPart,isBodyParts})  => {
     carousel.scrollLeft = carousel.scrollLeft + 500;
   }
   return (
-    <div class="carousel-container">
+    <div className="carousel-container">
       <ArrowBackIosIcon onClick={Left}  className='arrows'  style={{marginRight:'5px'}}/>
       <div id="carousel" className='carousel-items'>
         {data.map((item)=>(
           <Box
-            key={item.id || item.name }
+            key={item.id}
             itemID={item.id || item.name }
             title={item.id || item.name }
             m="0 10px">
